@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="description" content="Explore practical technology courses at Elevate Apps Academy." />
+    <title>Elevate Apps Academy | Next-Gen IT Career Portal</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CDN retained so the existing utility classes work without rewriting the design. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              serif: ['"Playfair Display"', "serif"],
+              mono: ['"JetBrains Mono"', "monospace"]
+            },
+            animation: {
+              "scroll-ltr": "scrollLTR 30s linear infinite",
+              "grid-scan-h": "gridScanH 4s ease-in-out infinite",
+              "grid-scan-v": "gridScanV 6s ease-in-out infinite",
+              "float-slow": "floatSlow 6s ease-in-out infinite"
+            },
+            keyframes: {
+              scrollLTR: {
+                "0%": { transform: "translateX(-50%)" },
+                "100%": { transform: "translateX(0%)" }
+              },
+              gridScanH: {
+                "0%, 100%": { transform: "translateY(0%)", opacity: "0.2" },
+                "50%": { transform: "translateY(100%)", opacity: "0.8" }
+              },
+              gridScanV: {
+                "0%, 100%": { transform: "translateX(0%)", opacity: "0.2" },
+                "50%": { transform: "translateX(100%)", opacity: "0.8" }
+              },
+              floatSlow: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" }
+              }
+            }
+          }
+        }
+      };
+    </script>
+    <!-- Lucide's browser build is used by the original Icon helper. -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
